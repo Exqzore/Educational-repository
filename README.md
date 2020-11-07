@@ -5,4 +5,5 @@ Disciplines included in the repository:
 * Interfaces and peripherals.
 * System software of computers
 * Web(front-end)
+* Personal computer architecture
 
