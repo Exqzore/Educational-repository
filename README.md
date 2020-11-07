@@ -6,4 +6,5 @@ Disciplines included in the repository:
 * System software of computers
 * Web(front-end)
 * Personal computer architecture
+* Program design and programming languages(ch.2)
 
