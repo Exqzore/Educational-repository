@@ -4,4 +4,5 @@ Disciplines included in the repository:
 * Theoretical foundations of computer networks.
 * Interfaces and peripherals.
 * System software of computers
+* Web(front-end)
 
