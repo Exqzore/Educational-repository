@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1250</width>
+    <height>880</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1250</width>
+    <height>880</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1250</width>
+    <height>880</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>ADRESS BOOK</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../для фона/xx.png</normaloff>../../для фона/xx.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+background-color: rgb(20, 46, 69);
+background-color: rgb(15, 26, 42);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="minimumSize">
+    <size>
+     <width>1250</width>
+     <height>880</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1250</width>
+     <height>880</height>
+    </size>
+   </property>
+   <widget class="QListWidget" name="list_widget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>300</width>
+      <height>641</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QListWidget{
+selection-background-color: rgb(34, 36, 49);
+background-color: rgb(15, 26, 42);
+border: none;
+}
+QListView{
+color: rgb(0, 172, 229);
+transition: 3s;
+}
+QListView::item:hover:!selected{
+color: rgb(61, 145, 192);
+border: 2px solid #828282;
+border-color: rgb(2, 93, 151);
+border-radius: 6px;
+background-color: rgb(0,36,69);
+}
+QListView:item:selected{
+color: rgb(61, 145, 192);
+border: 2px solid #828282;
+border-color: rgb(2, 93, 151);
+border-radius: 6px;
+background-color: rgb(0,36,69);
+}
+QScrollBar:vertical {   
+        border: 1px;
+	    border-color: rgb(11, 68, 112);
+        background:white;
+        width:10px;    
+        margin: 0px 0px 0px 0px;
+    }
+    QScrollBar::handle:vertical {
+        background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop: 0  rgb(2, 93, 151), stop: 0.5 rgb(2, 93, 151), stop:1  rgb(2, 93, 151));
+        min-height: 0px;
+    }
+    QScrollBar::add-line:vertical {
+        background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop: 0  rgb(2, 93, 151), stop: 0.5  rgb(2, 93, 151),  stop:1  rgb(2, 93, 151));
+        height: 0px;
+        subcontrol-position: bottom;
+        subcontrol-origin: margin;
+    }
+    QScrollBar::sub-line:vertical {
+        background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop: 0  rgb(2, 93, 151), stop: 0.5  rgb(2, 93, 151),  stop:1 rgb(2, 93, 151));
+        height: 0 px;
+        subcontrol-position: top;
+        subcontrol-origin: margin;
+    }</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_ADD">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>100</y>
+      <width>150</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color: rgb(0, 172, 229);
+border: 2px solid #828282;;
+border-color: rgb(11, 68, 112);
+background-color: rgb(11, 68, 112);
+border-bottom-color: rgb(0, 172, 229);
+border-radius: 1px;
+}
+
+QPushButton:hover{
+background-color: rgb(15, 85, 139);
+}
+
+QPushButton:pressed{
+background-color: rgb(15, 85, 139);
+}</string>
+    </property>
+    <property name="text">
+     <string>Добавить</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_sort_by">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>150</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox{
+color: rgb(0, 172, 229);
+border: 2px solid #828282;
+border-color: rgb(11, 68, 112);
+background-color: rgb(11, 68, 112);
+border-bottom-color: rgb(0, 172, 229);
+border-radius: 1px;
+}
+QComboBox:hover{
+background-color: rgb(15, 85, 139);
+}
+QComboBox::drop-down{
+    border:none;
+}
+QListView{
+    border: none;
+    color: rgb(0, 172, 229);
+    selection-background-color: rgb(0, 172, 229);
+    background-color: rgb(11, 68, 112);
+}
+</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>По имени</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>По фамилии</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>По телефону</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="comboBox_menuPeople">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>300</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox{
+color: rgb(0, 172, 229);
+border: 2px solid #828282;
+border-color: rgb(11, 68, 112);
+background-color: rgb(11, 68, 112);
+border-bottom-color: rgb(0, 172, 229);
+border-radius: 1px;
+}
+QComboBox:hover{
+background-color: rgb(15, 85, 139);
+}
+QComboBox::drop-down{
+    border:none;
+}
+QListView{
+    border: none;
+    color: rgb(0, 172, 229);
+    selection-background-color: rgb(0, 172, 229);
+    background-color: rgb(11, 68, 112);
+}</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Все</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Родственники</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Друзья</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Коллеги</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Незнакомые</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>280</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit{
+color: rgb(81, 81, 81);
+	background-color: rgb(223, 223, 223);
+border: 2px solid #828282;
+border-radius: 14px;
+border-color: rgb(0, 166, 255);
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="gv_Area">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>90</y>
+      <width>920</width>
+      <height>691</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGraphicsView{
+border: none;
+	background-color: rgb(15, 26, 42);
+}</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_Save">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>790</y>
+      <width>191</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color:rgb(0, 172, 229);
+border: 2px solid #828282;;
+border-color: rgb(11, 68, 112);
+background-color: rgb(11, 68, 112);
+border-bottom-color: rgb(0, 172, 229);
+}
+
+QPushButton:hover{
+background-color: rgb(15, 85, 139);
+}
+
+QPushButton:pressed{
+background-color: rgb(15, 85, 139);
+}</string>
+    </property>
+    <property name="text">
+     <string>СОХРАНИТЬ</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_Remove">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>790</y>
+      <width>191</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color: rgb(0, 172, 229);
+border: 2px solid #828282;;
+border-color: rgb(11, 68, 112);
+background-color: rgb(11, 68, 112);
+border-bottom-color: rgb(0, 172, 229);
+}
+
+QPushButton:hover{
+background-color: rgb(15, 85, 139);
+}
+
+QPushButton:pressed{
+background-color: rgb(15, 85, 139);
+}</string>
+    </property>
+    <property name="text">
+     <string>УДАЛИТЬ</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_Edit">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>790</y>
+      <width>191</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color: rgb(0, 172, 229);
+border: 2px solid #828282;;
+border-color: rgb(11, 68, 112);
+background-color: rgb(11, 68, 112);
+border-bottom-color: rgb(0, 172, 229);
+}
+
+QPushButton:hover{
+background-color: rgb(15, 85, 139);
+}
+
+QPushButton:pressed{
+background-color: rgb(15, 85, 139);
+}</string>
+    </property>
+    <property name="text">
+     <string>РЕДАКТИРОВАТЬ</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_Save_2">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>790</y>
+      <width>191</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+color: rgb(0, 172, 229);
+border: 2px solid #828282;;
+border-color: rgb(11, 68, 112);
+background-color: rgb(11, 68, 112);
+border-bottom-color: rgb(0, 172, 229);
+}
+
+QPushButton:hover{
+background-color: rgb(15, 85, 139);
+}
+
+QPushButton:pressed{
+background-color: rgb(15, 85, 139);
+}</string>
+    </property>
+    <property name="text">
+     <string>СОХРАНИТЬ</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>790</y>
+      <width>291</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Proxy 1</family>
+      <pointsize>29</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(20, 46, 69);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1250</width>
+      <height>880</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(20, 46, 69);
+border: none;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>10</y>
+      <width>361</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Candara Light</family>
+      <pointsize>44</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+background-color: rgb(20, 46, 69);</string>
+    </property>
+    <property name="text">
+     <string>ADRESS BOOK</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>960</x>
+      <y>31</y>
+      <width>261</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	background-color: rgba(0, 0, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>________________________________________________________</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>31</y>
+      <width>251</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	background-color: rgba(0, 0, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>________________________________________________________</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lab_HELLO">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>340</y>
+      <width>591</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Proxy 9</family>
+      <pointsize>101</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	background-color: rgba(0, 0, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>HELLO!!!</string>
+    </property>
+   </widget>
+   <zorder>graphicsView</zorder>
+   <zorder>list_widget</zorder>
+   <zorder>btn_ADD</zorder>
+   <zorder>comboBox_sort_by</zorder>
+   <zorder>comboBox_menuPeople</zorder>
+   <zorder>lineEdit</zorder>
+   <zorder>gv_Area</zorder>
+   <zorder>btn_Save</zorder>
+   <zorder>btn_Remove</zorder>
+   <zorder>btn_Edit</zorder>
+   <zorder>btn_Save_2</zorder>
+   <zorder>label</zorder>
+   <zorder>label_2</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_4</zorder>
+   <zorder>lab_HELLO</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1250</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QMenuBar{
+border: none;
+color:rgb(0, 172, 229);
+	background-color: rgb(15, 26, 42);
+}
+
+QMenuBar:hover{
+	background-color: rgb(15, 26, 42);
+}
+
+QMenuBar:pressed{
+	background-color: rgb(15, 26, 42);
+}</string>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="styleSheet">
+     <string notr="true">QMenu{
+color:rgb(0, 172, 229);
+background-color:  rgb(11, 68, 112);
+}
+
+QMenu:hover{
+background-color: rgb(15, 85, 139);
+}
+
+QMenu:pressed{
+background-color: rgb(15, 85, 139);
+}</string>
+    </property>
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="action"/>
+    <addaction name="action_2"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <action name="action">
+   <property name="text">
+    <string>Отменить</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>Главное меню</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
