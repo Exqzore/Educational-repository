@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Happy Belarusians</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div class="flag">
+			<img src="pogonya.png"/>
+		</div>
+		<svg>
+			<filter id="wavy">
+				<feTurbulence x="0" y="0" baseFrequency="0.09" numOctaves="5" seed="2">
+					<animate attributeName="baseFrequency" dur="10s" values="0;0.02;0;" keyTimes="0;0.6;1" repeatCount="indefinite"></animate>
+				</feTurbulence>
+				<feDisplacementMap in="SourceGraphic" scale="10"></feDisplacementMap>
+			</filter>
+		</svg>
+	</body>
+</html>
